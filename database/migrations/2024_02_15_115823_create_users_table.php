@@ -19,6 +19,7 @@ return new class extends Migration {
             $table->string('phone');
             $table->string('email');
             $table->string('password');
+
             $table->charset = "utf8";
             $table->collation = "utf8_general_ci";
 

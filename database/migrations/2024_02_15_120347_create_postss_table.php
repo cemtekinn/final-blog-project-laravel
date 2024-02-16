@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string("slug")->unique();
             $table->bigInteger('views');
             $table->string('image')->nullable();
+            $table->unsignedBigInteger("user_id")->constrained();
+            $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade");
         });
     }
 
