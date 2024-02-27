@@ -132,7 +132,6 @@
                                 <p>Kullanıcılar</p>
                             </a>
                         </li>
-
                     </ul>
                 </li>
 
@@ -145,7 +144,6 @@
                         </p>
                     </a>
                 </li>
-
 
                 <li class="nav-item">
                     <a href="#" class="nav-link">

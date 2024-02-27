@@ -46,13 +46,11 @@
                                     <button id="deleteButton" type="button" class="btn btn-danger d-flex align-items-center  border-3 border-white">
                                         <i class="fas fa-trash-alt"></i> Sil
                                     </button>
-
                                     <form id="deleteForm" action="{{ route('categories.destroy', $category) }}"
                                           method="post" style="display: none;">
                                         @csrf
                                         @method('delete')
                                     </form>
-
                                 </td>
                             </tr>
                         @endforeach
