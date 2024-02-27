@@ -13,7 +13,8 @@ class AnnouncementController extends Controller
      */
     public function index()
     {
-        //
+        $announcements=Announcement::all();
+        return view("admin.pages.announcements.index",compact('announcements'));
     }
 
     /**
@@ -21,7 +22,7 @@ class AnnouncementController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.pages.announcements.create");
     }
 
     /**

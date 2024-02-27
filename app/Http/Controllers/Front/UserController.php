@@ -20,7 +20,7 @@ class UserController extends Controller
         $password=$validatedData['password'];
         $email=$validatedData['email'];
 
-        User::create([
+        $user=User::create([
             "name"=>$name,
             "lastname"=>$lastname,
             "username"=>$username,
@@ -28,7 +28,7 @@ class UserController extends Controller
             "phone"=>$phone,
             "password"=>bcrypt($password)
         ]);
-
+        $user->assignRole("User");
         return redirect()->back()->with("success","Kullanıcı başarıyla eklendi");
     }
 }

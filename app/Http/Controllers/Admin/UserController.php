@@ -14,28 +14,6 @@ class UserController extends Controller
         //
     }
 
-    public function store(UserRegisterRequest $request)
-    {
-        $validatedData = $request->validated();
-        $name = $validatedData['name'];
-        $lastname = $validatedData['lastname'];
-        $username = $validatedData['username'];
-        $phone=$validatedData['phone'];
-        $password=$validatedData['password'];
-        $email=$validatedData['email'];
-
-        User::create([
-            "name"=>$name,
-            "lastname"=>$lastname,
-            "username"=>$username,
-            "email"=>$email,
-            "phone"=>$phone,
-            "password"=>bcrypt($password)
-        ]);
-
-        return redirect()->back()->with("success","Kullanıcı başarıyla eklendi");
-    }
-
     public function show(User $user)
     {
         //

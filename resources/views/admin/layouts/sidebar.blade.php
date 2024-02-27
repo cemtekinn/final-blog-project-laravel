@@ -8,7 +8,6 @@
             <span class="brand-text font-weight-light">{{Auth::user()->username}}</span>
         </a>
     @endif
-
     <!-- Sidebar -->
     <div class="sidebar">
         @if(!Auth::user()->is_super_admin)
@@ -92,15 +91,15 @@
 
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('posts.index')}}"
-                               class="nav-link {{ Request::is('panel/announcements') ? 'active' : '' }}">
+                            <a href="{{route('announcements.create')}}"
+                               class="nav-link {{ Request::is('panel/announcements/create') ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-bell"></i>
                                 <p>Yeni Duyuru</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('posts.create')}}"
-                               class="nav-link {{ Request::is('panel/past-announcements') ? 'active' : '' }}">
+                            <a href="{{route('announcements.index')}}"
+                               class="nav-link {{ Request::is('panel/announcements') ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-bell-slash"></i>
                                 <p>Geçmiş Duyurular</p>
                             </a>
@@ -109,7 +108,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{route("tags.index")}}"
+                    <a href="{{route("panel.subscribers")}}"
                        class="nav-link {{ Request::is('panel/subscriber') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
