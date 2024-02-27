@@ -24,7 +24,7 @@
                         <td>{{$post->title}}</td>
                         <td>
                             @foreach($post->categories as $category)
-                                <li>{{ $category->name }}</li>
+                                <li>{{ $category->title }}</li>
                             @endforeach
                         </td>
 

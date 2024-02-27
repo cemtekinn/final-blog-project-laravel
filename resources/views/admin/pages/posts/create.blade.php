@@ -18,6 +18,7 @@
                 <label for="exampleInputEmail1">Kısa açıklama</label>
                 <input type="text" class="form-control" name="description" required>
             </div>
+
             <div class="form-group">
                 <label for="categorySelect">Kategori Seçiniz</label>
                 <select class="form-control" id="categorySelect" name="categories[]" multiple required>

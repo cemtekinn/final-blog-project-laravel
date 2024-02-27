@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-
     public function registerIndex()
     {
         return view("front.pages.auth.register");

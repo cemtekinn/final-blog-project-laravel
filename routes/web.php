@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\AuthController as AdminAuthController;
 use App\Http\Controllers\Front\UserController as FrontUserController;
 use App\Http\Controllers\Front\AuthController as FrontAuthController;
 
+
 Route::prefix("panel")->group(function () {
     Route::get('/', [AdminAuthController::class ,"index"]);
     Route::post('/login',[AdminAuthController::class,"login"])->name("panel.login");
