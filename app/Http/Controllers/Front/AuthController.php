@@ -13,5 +13,26 @@ class AuthController extends Controller
     {
         return view("front.pages.auth.register");
     }
+    public function register(UserRegisterRequest $request)
+    {
+        $validatedData = $request->validated();
+        $name = $validatedData['name'];
+        $lastname = $validatedData['lastname'];
+        $username = $validatedData['username'];
+        $phone=$validatedData['phone'];
+        $password=$validatedData['password'];
+        $email=$validatedData['email'];
+
+        $user=User::create([
+            "name"=>$name,
+            "lastname"=>$lastname,
+            "username"=>$username,
+            "email"=>$email,
+            "phone"=>$phone,
+            "password"=>bcrypt($password)
+        ]);
+        $user->assignRole("User");
+        return redirect()->back()->with("success","Kullanıcı başarıyla eklendi");
+    }
 
 }

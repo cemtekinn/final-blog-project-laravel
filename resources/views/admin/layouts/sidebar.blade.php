@@ -108,15 +108,14 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{route("panel.subscribers")}}"
+                    <a href="{{route("subscribers.index")}}"
                        class="nav-link {{ Request::is('panel/subscriber') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
-                            Aboneler
+                         Bülten
                         </p>
                     </a>
                 </li>
-
 
                 <li class="nav-item">
                     <a href="#" class="nav-link {{ Request::is('panel/authorization') ? 'active' : '' }}">

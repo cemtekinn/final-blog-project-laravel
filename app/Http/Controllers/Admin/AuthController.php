@@ -18,10 +18,13 @@ class AuthController extends Controller
         }
     }
 
-    public function login(Request $request)
+    public function login(UserLoginRequest $request)
     {
-        $credentials = $request->only('username', 'password');
-        if (Auth::attempt($credentials)) {
+        $request=$request->validated();
+        $username=$request['username'];
+        $password=$request['password'];
+
+        if (Auth::attempt(['username' => $username, 'password' => $password])) {
             return redirect('/panel');
         } else {
             return redirect('/panel')->with('error', 'Hatalı giriş bilgileri');
