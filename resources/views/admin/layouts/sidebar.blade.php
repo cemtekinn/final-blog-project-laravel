@@ -145,16 +145,16 @@
                     </ul>
                 </li>
 
-                {{--   admin için bu alan olmayacak  --}}
-                <li class="nav-item">
-                    <a href="{{route("tags.index")}}"
-                       class="nav-link {{ Request::is('panel/notification') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-bell"></i>
-                        <p>
-                            Bildirimler
-                        </p>
-                    </a>
-                </li>
+{{--                --}}{{--   admin için bu alan olmayacak  --}}
+{{--                <li class="nav-item">--}}
+{{--                    <a href="{{route("tags.index")}}"--}}
+{{--                       class="nav-link {{ Request::is('panel/notification') ? 'active' : '' }}">--}}
+{{--                        <i class="nav-icon fas fa-bell"></i>--}}
+{{--                        <p>--}}
+{{--                            Bildirimler--}}
+{{--                        </p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
 
                 {{--                <li class="nav-item">--}}
                 {{--                    <a href="#" class="nav-link">--}}

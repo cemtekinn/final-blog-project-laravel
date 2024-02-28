@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\Admin\PostConroller as AdminPostController;
 use App\Http\Controllers\Admin\TagController as AdminTagController;
@@ -28,5 +29,5 @@ Route::post('/register',[FrontAuthController::class,'register'])->name("register
 Route::get('/login',[FrontAuthController::class,'loginIndex'])->name("login.index");
 
 
-
+//Will be delete
 Route::get("/test",[\App\Http\Controllers\TestController::class,"test"]);
